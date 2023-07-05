@@ -1,6 +1,4 @@
-# php-master-worker
-
-```php
+<?php
 include dirname(__DIR__).'/vendor/autoload.php';
 
 // 一次最多执行3个任务
@@ -16,4 +14,3 @@ while(true) {
     $masterWorker->addTask($count.' task5', 'php -r "sleep(18); echo \''.$count.':task5.18\';"');
     $masterWorker->run();
 }
-```
